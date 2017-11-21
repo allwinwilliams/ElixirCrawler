@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Scraper
 
 **TODO: Add description**
@@ -19,3 +20,6 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/scraper](https://hexdocs.pm/scraper).
 
+=======
+# ElixirCrawler
+>>>>>>> 3dc39c69fe95d5ea4d0fb0c08375de44e2ec5c96
