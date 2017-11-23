@@ -26,7 +26,9 @@ defmodule Scraper.Mixfile do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
 	    {:httpoison, "~> 0.5"},
     	{:floki, "~> 0.3"},
-    	{:hound, "~> 1.0" }
+      # {:html5ever, "~> 0.5.0"},
+    	{:hound, "~> 1.0" },
+      {:bolt_sips, "~> 0.4.1"}
     ]
   end
 end
