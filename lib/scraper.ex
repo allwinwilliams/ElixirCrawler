@@ -1,4 +1,4 @@
-defmodule Scraper do
+defmodule Crawler.Scraper do
   @moduledoc """
   Documentation for Scraper.
   """
@@ -10,8 +10,13 @@ defmodule Scraper do
   end
 
   def start do
-    IO.puts "starting"
-    Hound.start_session()
+    IO.puts "starting session..."
+    Hound.start_session
+  end
+
+  def stop do
+    IO.puts "...stopping session"
+    Hound.end_session
   end
 
   def process_link(url) do
@@ -20,6 +25,8 @@ defmodule Scraper do
 
   def get_source(url) do
     HTTPoison.get!(url).body
+    # navigate_to url
+    # page_source()
   end
 
   def get_links(src) do
@@ -42,21 +49,20 @@ defmodule Scraper do
   end
 
   def process_source(url) do
-    src = get_source(url)
+    src = url
+          |> get_source
           |> Floki.parse
     IO.puts "get links::"
     get_links(src)
-    |> IO.puts
     IO.puts "get articles::"
     get_article(src)
-    |> IO.puts
   end
 
-  def download(src) do
-    IO.puts "Downloading #{src}"
-    IO.puts HTTPoison.get!(src).body
-    IO.puts "Done Downloading #{src}"
-  end
+  # def download(src) do
+  #   IO.puts "Downloading #{src}"
+  #   IO.puts HTTPoison.get!(src).body
+  #   IO.puts "Done Downloading #{src}"
+  # end
 
   @doc """
   Hello world.

@@ -1,6 +1,6 @@
 
 # Elixir Crawler
-# Scraper
+# Crawler
 
 **TODO: Add description**
 

@@ -1,4 +1,4 @@
-defmodule Scraper.Crawler do
+defmodule Crawler do
   @moduledoc """
   Documentation for Scraper.
   """
