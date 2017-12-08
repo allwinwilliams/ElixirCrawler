@@ -40,11 +40,25 @@ defmodule Crawler.Scraper do
   end
 
   def get_article(src) do
-    IO.puts "get article with title.."
+    IO.puts "get article.."
     src
     |> Floki.find("body")
     |> Floki.text
     |> String.replace(~r/\s+/, " ")
+    |> IO.puts
+  end
+
+  def get_title(src) do
+    IO.puts "get article with title.."
+    src
+    |> Floki.find("body")
+    |> Floki.text
+    |> IO.puts
+  end
+
+  def get_website(url) do
+    IO.puts "get website where article is posted...."
+    url
     |> IO.puts
   end
 

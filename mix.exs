@@ -14,7 +14,7 @@ defmodule Crawler.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-	     applications: [:logger, :httpoison, :hound]
+	     applications: [:logger, :httpoison, :hound, :bolt_sips], mod: {Bolt.Sips.Application, []}
       # extra_applications: [:logger]
     ]
   end
@@ -28,7 +28,8 @@ defmodule Crawler.Mixfile do
     	{:floki, "~> 0.3"},
       # {:html5ever, "~> 0.5.0"},
     	{:hound, "~> 1.0" },
-      {:bolt_sips, "~> 0.4.1"}
+      {:bolt_sips, "~> 0.4.11"},
+      {:etls, "~> 1.2 "}
     ]
   end
 end

@@ -4,7 +4,18 @@ use Mix.Config
 
 # config :hound, driver: "selenium"
 config :hound, driver: "phantomjs"
+
+config :bolt_sips, Bolt,
+
+  hostname: 'localhost',
+  port: 7687,
+  # url: 'http://localhost:7474',
+  basic_auth: [username: "neo4j", password: "password"],
+  pool_size: 5,
+  max_overflow: 1
+
 # config :floki, :html_parser, Floki.HTMLParser.Html5ever
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,
